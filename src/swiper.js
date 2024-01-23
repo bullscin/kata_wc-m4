@@ -4,7 +4,7 @@ import Swiper from 'swiper';
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 'auto',
+  slidesPerView: '1',
 
   // configure Swiper to use modules
   modules: [Navigation, Pagination],
