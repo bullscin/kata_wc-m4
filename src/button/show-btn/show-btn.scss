@@ -1,0 +1,82 @@
+.show__btn {
+  color: #1b1c21;
+  font-family: 'TTLakes';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+
+  position: relative;
+  padding-left: 48px;
+
+  transition: color 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    bottom: 0px;
+    background-image: url(./images/btn/expand.png);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+
+    @media (min-width: 768px) {
+      left: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 32px;
+  }
+}
+
+.hide__btn {
+  display: none;
+  color: #1b1c21;
+  font-family: 'TTLakes';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+
+  position: relative;
+  padding-left: 48px;
+
+  transition: color 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    bottom: 0px;
+    background-image: url(./images/btn/expand.png);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    transform: rotate(180deg);
+
+    @media (min-width: 768px) {
+      left: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 32px;
+  }
+}
+
+.show__btn:hover,
+.hide__btn:hover {
+  color: #7e7e82;
+  transition: color 0.3s ease;
+}
+
+.active {
+  display: block;
+}
+.no-active {
+  display: none;
+}

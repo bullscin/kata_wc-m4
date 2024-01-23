@@ -1,0 +1,76 @@
+.footer--mobile {
+  padding: 0 24px 32px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1366px) {
+    flex: 3.5 0 auto;
+  }
+}
+
+.menu__list--f {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.menu__button--call {
+  background-image: url('./images/ic/call.svg');
+}
+.menu__button--chat {
+  background-image: url('./images/ic/chat.svg');
+}
+.menu__button--profile {
+  background-image: url('./images/ic/profile.svg');
+}
+.email {
+  margin-bottom: 12px;
+  display: block;
+}
+
+.phone {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  margin-bottom: 8px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.languages {
+  display: flex;
+  gap: 0 16px;
+}
+
+.btn__radio--input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.btn__radio--text {
+  color: #1b1c21;
+  font-family: 'TTLakes';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+
+  transition: color 0.3s ease;
+
+  &:focus,
+  &:hover {
+    color: #7e7e82;
+    transition: color 0.3s ease;
+  }
+}
+
+.btn__radio--input:checked + .btn__radio--text {
+  color: #7e7e82;
+  transition: color 0.3s ease;
+}

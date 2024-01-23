@@ -1,0 +1,63 @@
+.swiper {
+  &.brands--swiper {
+    min-height: 140px;
+  }
+  &.tech--swiper {
+    min-height: 228px;
+  }
+
+  &.price--swiper {
+    min-height: 260px;
+  }
+
+  &-wrapper {
+    padding: 16px;
+  }
+  &-wrapper.price__list--mobile {
+    padding: 16px 8px;
+  }
+
+  div & .brands--pg {
+    top: 104px;
+  }
+
+  div & .tech--pg {
+    top: 192px;
+  }
+
+  div & .price--pg {
+    top: 232px;
+  }
+
+  &-pagination &-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+  }
+
+  &-slide.brands__item,
+  &-slide.tech__item {
+    display: inherit;
+    max-width: 240px;
+  }
+  &-slide.price__item {
+    display: inherit;
+    max-width: 260px;
+  }
+
+  &-slide.tech__item {
+    height: 160px;
+  }
+
+  &-slide.price__item {
+    height: 200px;
+  }
+
+  &.brands--swiper,
+  &.tech--swiper,
+  &.price--swiper {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}

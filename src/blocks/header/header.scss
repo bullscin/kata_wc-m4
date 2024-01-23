@@ -1,0 +1,106 @@
+@import "./header-left/header-left.scss";
+@import "./header-right/header-right.scss";
+@import "src/basic/var.scss";
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  &__btn {
+    background-color: $color-btn;
+  }
+
+  &__nav {
+    background-color: #fff;
+    padding: 19px 16px;
+    gap: 0 16px;
+
+    @media (min-width: 768px) {
+      min-width: 725px;
+      padding: 19px 24px;
+    }
+
+    @media (min-width: 1120px) {
+      display: none;
+    }
+  }
+
+  &--left {
+    display: flex;
+    gap: 0 16px;
+
+    @media (min-width: 768px) {
+      gap: 20px;
+    }
+  }
+
+  &--right {
+    display: flex;
+    gap: 0 20px;
+  }
+
+  &__bottom {
+    background-color: $color-bg;
+    padding: 24px 16px;
+
+    @media (min-width: 768px) {
+      padding: 24px 24px 32px;
+    }
+
+    @media (min-width: 1120px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 42px 32px 9px 32px;
+    }
+  }
+}
+
+.stick {
+  width: 2px;
+  height: 32px;
+  border-radius: 1px;
+  background: #eaeaea;
+  align-self: center;
+
+  &--left {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.title {
+  font-family: "TTLakes";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 40px;
+    background-color: transparent;
+    background-image: url("./images/ic/stick-blue.svg");
+    left: -16px;
+
+    @media (min-width: 768px) {
+      left: -24px;
+    }
+
+    @media (min-width: 1120px) {
+      width: 3px;
+      left: -32px;
+    }
+  }
+}

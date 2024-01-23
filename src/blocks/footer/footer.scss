@@ -1,0 +1,50 @@
+@import "src/basic/var.scss";
+
+.footer {
+  border-top: 1px solid #d9fff5;
+  background-color: $color-bg;
+  padding: 16px 4px 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  color: $color-text;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 32px 24px 41px;
+    gap: 0;
+  }
+  @media (min-width: 768px) {
+    padding: 32px 32px 21px;
+  }
+
+  &__text:first-child {
+    @media (min-width: 768px) {
+      min-width: 218px;
+      text-align: left;
+    }
+  }
+  &__text:last-child {
+    @media (min-width: 768px) {
+      width: 213px;
+      text-align: right;
+    }
+  }
+
+  &__link {
+    opacity: 1;
+
+    &:hover,
+    :focus {
+      opacity: 0.75;
+    }
+  }
+}

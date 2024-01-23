@@ -1,0 +1,56 @@
+.menu__list {
+  display: none;
+  gap: 0 16px;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.menu__button--call {
+  background-image: url('./images/ic/call.svg');
+}
+.menu__button--chat {
+  background-image: url('./images/ic/chat.svg');
+}
+.menu__button--profile {
+  background-image: url('./images/ic/profile.svg');
+}
+
+.info {
+  display: flex;
+
+  &__top {
+    display: none;
+
+    @media (min-width: 1120px) {
+      display: flex;
+      align-items: center;
+      gap: 0 8px;
+    }
+  }
+
+  &__descr {
+    display: none;
+
+    @media (min-width: 1120px) {
+      display: block;
+    }
+  }
+
+  &__header {
+    gap: 0 16px;
+  }
+
+  p + &__button + p {
+    margin-left: 24px;
+  }
+
+  &__button--repair {
+    background-image: url('./images/ic/repair.svg');
+  }
+
+  &__button--checkstatus {
+    background-image: url('./images/ic/checkstatus.svg');
+  }
+}

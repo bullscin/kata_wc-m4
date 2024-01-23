@@ -1,0 +1,122 @@
+.phone-m {
+  display: none;
+  transform: translateX(-100%);
+  transition: 0.9s ease-out;
+
+  &.phone-m--active {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 320px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 24px 16px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    overflow: auto;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+      -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+
+    transform: translateX(0);
+    transition: all 0.9s ease-in-out;
+
+    @media (min-width: 1439px) {
+      width: 440px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+
+    padding-top: 8px;
+    margin-bottom: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 40px;
+      background-color: transparent;
+      background-image: url(images/ic/stick-blue.svg);
+      background-position: bottom;
+      left: -16px;
+    }
+  }
+}
+
+// .btn__phone-m,
+// .btn__modal {
+//   display: none;
+//   background-color: #ff3e79;
+
+//   @media (min-width: 1440px) {
+//     transform: translateX(1440px);
+//     transition: 950ms ease;
+//     position: absolute;
+//     z-index: 100;
+//     top: 32px;
+//   }
+
+//   &--active {
+//     @media (min-width: 1440px) {
+//       transform: translateX(928px);
+//       transition: 950ms ease;
+//       display: block;
+//     }
+//   }
+// }
+
+.btn__phone-mob {
+  background-color: #ff3e79;
+  align-self: flex-start;
+  margin-bottom: 32px;
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    color: #7e7e82;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+
+    margin-bottom: 18px;
+
+    & span {
+      color: #ff3e79;
+    }
+  }
+  .price__btn.form__btn {
+    position: static;
+    margin-left: auto;
+    border: none;
+  }
+}
+
+.tel {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
